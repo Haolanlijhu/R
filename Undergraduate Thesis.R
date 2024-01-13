@@ -8,6 +8,14 @@ library(tseries)
 ts <- ts(Data = df)
 attach(ts)
 
+#Pearson’s product-moment correlation
+cor.test(LCHFP,LDHSP, method="spearman")
+cor.test(LCHFP,LDHSP, method="kendall")
+cor.test(RUHFP,RCHFP, method="spearman")
+cor.test(RUHFP,RCHFP, method="kendall")
+cor.test(RUHFP,RDHSP, method="spearman")
+cor.test(RUHFP,RDHSP, method="kendall")
+
 #ADF test
 adf.test(LCHFP)
 adf.test(LDHSP)
